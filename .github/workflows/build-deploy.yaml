@@ -138,12 +138,12 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '7.0.x' # SDK Version to use; x will use the latest version of the 3.1 channel
+        dotnet-version: '3.1.3' # SDK Version to use; x will use the latest version of the 3.1 channel
 
     # This task updates the database with the lates schema. Valid for intial setup and small non-changes. For breaking changes, other strategy needs to be in place.
     - name: Update Database
       run: |
-        dotnet tool install  --global dotnet-ef 
+        dotnet tool install dotnet-ef --global  --version 3.1.3
         dotnet tool restore
         dotnet ef database update
       env:
