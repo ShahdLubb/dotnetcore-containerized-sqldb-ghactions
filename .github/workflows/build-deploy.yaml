@@ -1,6 +1,6 @@
 name: Build image, push & deploy
 
-on:workflow_dispatch
+on: workflow_dispatch
 
 # This workflow consider the required Azure Resources are ready. Follow the detailed instructions to setup the pre-requisites in azuredeploy.yaml to:
 #   1. Prepare the Azure Resource Group
