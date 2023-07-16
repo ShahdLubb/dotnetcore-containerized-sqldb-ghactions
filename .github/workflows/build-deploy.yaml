@@ -26,6 +26,11 @@ env:
   ACR_LOGIN_SERVER: TestAppGHAAzure.azurecr.io # fqdn for the Azure Container Registry
   ACR_USERNAME: ${{ secrets.ACR_USERNAME }} # user name for accessing Azure Container Registry
   ACR_PASSWORD: ${{ secrets.ACR_PASSWORD }} # password for accesing the Azure Container Registry
+  
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
